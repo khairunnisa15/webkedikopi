@@ -34,7 +34,7 @@
 
       <div class="navbar-extra a">
         <a href="#" id="search-button"><i data-feather="search"></i></a>
-        <a href="#" id="shopping-cart"><i data-feather="shopping-cart"></i></a>
+        <a href="#" id="shopping-cart-button"><i data-feather="shopping-cart"></i></a>
         <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
       </div>
 
@@ -46,6 +46,34 @@
        </div>
       <!-- Searh Form End-->
 
+      <!-- Shooping Cart star-->
+              <div class="shopping-cart">
+        <div class="cart-item">
+            <img src="img/products/product1.jpg" alt="product1">
+            <div class="item-detail">
+                <h3>Product 1</h3>
+                <div class="item-price">IDR 70K</div>
+            </div>
+            <i data-feather="trash-2" class="remove-item"></i>
+        </div>
+        <div class="cart-item">
+            <img src="img/products/product2.jpg" alt="product1">
+            <div class="item-detail">
+                <h3>Product 2</h3>
+                <div class="item-price">IDR 150K</div>
+            </div>
+            <i data-feather="trash-2" class="remove-item"></i>
+        </div>
+        <div class="cart-item">
+            <img src="img/products/product3.jpg" alt="product1">
+            <div class="item-detail">
+                <h3>Product 3</h3>
+                <div class="item-price">IDR 35K</div>
+            </div>
+            <i data-feather="trash-2" class="remove-item"></i>
+        </div>
+       </div>
+      <!-- Shooping Cart end-->
     </nav>
     <!-- Navbar end-->
 
@@ -140,7 +168,7 @@
     </section>
     <!-- Menu Section end-->
 
-      <!-- Produtcs Section start-->Add commentMore actions
+      <!-- Produtcs Section start-->
       <section class="products" id="products">
         <h2><span>Produk Unggulan</span>Kami</h2>
         <p>Biji kopi kami berasal dari perkebunan yang terpercaya dan terjamin kualitasnya
@@ -150,7 +178,7 @@
             <div class="product-card">
                 <div class="product-icons">
                     <a href="#"><i data-feather="shopping-cart"></i></a>
-                    <a href="#"><i data-feather="eye"></i></a>
+                    <a href="#" class="item-detail-button"><i data-feather="eye"></i></a>
                 </div>
                 <div class="product-image">
                     <img src="img/products/product1.jpg" alt="product1">
@@ -266,7 +294,7 @@
     </footer>
     <!-- Footer Section  end-->
 
-
+     
     <!-- Feather Icons Init-->
     <script>
       feather.replace();

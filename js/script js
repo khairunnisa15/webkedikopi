@@ -17,6 +17,15 @@ searchButton.addEventListener('click', function (e) {
   searchBox.focus();
 });
 
+// === TOGGLE SHOPPING CART ===
+const shoppingCartButton = document.querySelector('#shopping-cart-button');
+const shoppingCart = document.querySelector('.shopping-cart');
+
+shoppingCartButton.addEventListener('click', (e) => {
+  e.preventDefault();
+  shoppingCart.classList.toggle('active');
+});
+
 // === TUTUP SEMUA SAAT KLIK DI LUAR ===
 document.addEventListener('click', function (e) {
   // Tutup navbar
