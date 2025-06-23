@@ -58,7 +58,7 @@ closeModal.addEventListener('click', () => {
 
 // === NAVBAR PRODUK SCROLL OTOMATIS ===
 const produkLink = document.querySelector('a[href="#products"]');
-const produkSection = document.querySelector('#products');
+const produkSection = document.querySelectorAll('#products');
 
 produkLink.addEventListener('click', function (e) {
   e.preventDefault();
