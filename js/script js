@@ -1,18 +1,18 @@
-// === TOMBOL HAMBURGER ===
+// === TOGGLE HAMBURGER MENU ===
 const hamburger = document.getElementById('hamburger-menu');
 const navbarNav = document.querySelector('.navbar-nav');
 
-hamburger.addEventListener('click', function () {
+hamburger.addEventListener('click', () => {
   navbarNav.classList.toggle('active');
 });
 
-// === TOMBOL SEARCH ===
+// === TOGGLE SEARCH FORM ===
 const searchButton = document.getElementById('search-button');
 const searchForm = document.querySelector('.search-form');
 const searchBox = document.querySelector('#search-box');
 
-searchButton.addEventListener('click', function (e) {
-  e.preventDefault(); // Hindari reload/scroll
+searchButton.addEventListener('click', (e) => {
+  e.preventDefault();
   searchForm.classList.toggle('active');
   searchBox.focus();
 });
@@ -28,13 +28,46 @@ shoppingCartButton.addEventListener('click', (e) => {
 
 // === TUTUP SEMUA SAAT KLIK DI LUAR ===
 document.addEventListener('click', function (e) {
-  // Tutup navbar
   if (!hamburger.contains(e.target) && !navbarNav.contains(e.target)) {
     navbarNav.classList.remove('active');
   }
-
-  // Tutup search form
   if (!searchButton.contains(e.target) && !searchForm.contains(e.target)) {
     searchForm.classList.remove('active');
+  }
+  if (!shoppingCartButton.contains(e.target) && !shoppingCart.contains(e.target)) {
+    shoppingCart.classList.remove('active');
+  }
+});
+
+// === MODAL PRODUK ===
+const itemDetailModal = document.querySelector('#item-detail-modal');
+const itemDetailButtons = document.querySelectorAll('.item-detail-button');
+
+itemDetailButtons.forEach((btn) => {
+  btn.addEventListener('click', (e) => {
+    e.preventDefault();
+    itemDetailModal.style.display = 'flex';
+  });
+});
+
+// === TUTUP MODAL PRODUK ===
+const closeModal = document.querySelector('.close-icon');
+closeModal.addEventListener('click', () => {
+  itemDetailModal.style.display = 'none';
+});
+
+// === NAVBAR PRODUK SCROLL OTOMATIS ===
+const produkLink = document.querySelector('a[href="#products"]');
+const produkSection = document.querySelector('#products');
+
+produkLink.addEventListener('click', function (e) {
+  e.preventDefault();
+  produkSection.scrollIntoView({ behavior: 'smooth' });
+});
+
+// Tutup modal jika klik di luar isi modal
+window.addEventListener('click', function (e) {
+  if (e.target === itemDetailModal) {
+    itemDetailModal.style.display = 'none';
   }
 });
