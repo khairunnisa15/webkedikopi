@@ -184,6 +184,13 @@ body {
   position: relative;
   -webkit-mask-image: linear-gradient(rgba(0,0,0,1) 85%, rgba(0,0,0,0));
   mask-image: linear-gradient(rgba(0,0,0,1) 85%, rgba(0,0,0,0));
+
+   /* Add commentMore actions
+    Perbedaan mask-image vs clip-path:
+    - mask-image: Bisa efek halus, transparan, gradasi, mendukung SVG/PNG.
+    - clip-path: Memotong elemen dengan bentuk tajam/geometris (circle, polygon).
+    - Gunakan mask-image untuk efek artistik, clip-path untuk potongan tegas.
+  */
 }
 
 
